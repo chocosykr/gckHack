@@ -1,18 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { SignInButton, SignedIn, SignedOut, UserButton, useAuth } from '@clerk/react-router';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-function App() {
-  const [count, setCount] = useState(0)
+
+export default function App() {
+  const navigate = useNavigate(); // Initialize navigate function
+  const { isSignedIn } = useAuth(); // Get the authentication state
+
+  useEffect(() => {
+    // Redirect to Dashboard when signed in
+    if (isSignedIn) {
+      navigate('/Dashboard');
+    }
+  }, [isSignedIn, navigate]); // Run effect when isSignedIn changes
 
   return (
-    <>
-     <h1 class="text-3xl font-bold underline bg-blue-900">
-    Hello world!
-  </h1>
-    </>
-  )
+    <header>
+      <SignedOut>
+        <SignInButton />
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+        {/* User is signed in, handled by useEffect */}
+      </SignedIn>
+    </header>
+  );
 }
-
-export default App
