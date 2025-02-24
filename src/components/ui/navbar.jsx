@@ -1,20 +1,32 @@
-import { Link } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import React from 'react'
+import { Avatar } from '@radix-ui/react-avatar'
+import gckHackathon from '/src/assets/gckAvatar.jpeg'
 
 const Navbar = () => {
   return (
-    <div className='bg-amber-600 flex allign justify-around h-10'>
+    <>
+    <div className='bg-amber-600 flex allign justify-around items-center h-12'>
+        <img src={gckHackathon} alt="img not found" className='h-8 rounded-3xl' />
         <h1 > 
             Title
         </h1>
-        <a href="/ui/Login">login</a>
-        <a href="gckHack/src/components/ui/modal.jsx">modal</a>
-        <Link to ="gckHack/src/components/ui/Login.jsx" className='hover:underline' > <p>home</p> </Link>
-        <Link to ="/ui/modal" className='hover:underline' > <li>jiwe</li> </Link> 
-        <Link to ="/services&products" className='hover:underline' > <span>Services & Products</span> </Link>
+        <div>
+        <Link to ="/ui/Login.jsx"  > <p>Login</p> </Link>
+        </div>
+        <div>
+        <Link to ="/modal" className='hover:underline' >jiwe </Link> 
+        </div>
+        <div className='flex align-middle'>
+        <Link to ="/services&products" className='hover:underline' > Services & Products</Link>
+        </div>
+        <div>
         <Link to ="/help" className='hover:underline' > Help </Link>
-
+        </div>
     </div>
+
+     
+    </>
   )
 }
 

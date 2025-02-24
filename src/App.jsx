@@ -10,7 +10,7 @@ import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-do
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/modal" element={<Modal isOpen={true} title={'jojo'} />} />
