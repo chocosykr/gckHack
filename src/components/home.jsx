@@ -2,7 +2,9 @@ import React from 'react'
 import Navbar from './ui/navbar'
 import SearchBar from './ui/SearchBar'
 import doct from '/src/assets/doctor1.jpeg'
-import chat from '/src/assets/chat1.jpeg'
+import chat from '/src/assets/doct2.avif'
+import { Link } from 'react-router-dom'
+// import chat from '/src/assets/chat1.jpeg'
 
 // import {
 //   Card,
@@ -23,10 +25,13 @@ const Home = () => {
         <h1 > 
             <p>Tumcho Dotor</p>
         </h1>
+        <Link to ="/RoleSelectionPage"  > <p>Login</p> </Link>
 
-        <button className='bg-blue-600 p-2 rounded-3xl'>
+        {/* <Link to="/RoleSelectionPage">
+        <button className='bg-blue-600 p-2 rounded-3xl hover:bg-blue-900'>
           Login
         </button>
+        </Link> */}
         </div>
       {/* <SearchBar/> */}
 
@@ -59,10 +64,10 @@ const Home = () => {
       <div className='flex bg-blue-200 justify-between p-1' >
       <div className='m-1'>
           {/* <h2>Image goes here</h2> */}
-        <img src={chat} alt="img not found" className='h-96 w-xl rounded' />
+        <img src={chat} alt="img not found" className='h-96 w-2xs rounded' />
 
         </div>
-        <div className=' h-96 w-3xl flex flex-col justify-evenly m-1 bg-white p-5.5 rounded'>
+        <div className=' h-96 w-6xl flex flex-col justify-evenly m-1 bg-amber-50 p-5.5 rounded'>
           <div>
             <p className='text-blue-400 font-extrabold text-lg'>Wide range of health professionals.</p>
             {/* <p className='w-1/3 text-gray-950'>Patients from rural areas often suffer from lack of clinics and other medical facilities. Our mission is to bridge this gap by connecting the patient and doctors through our website.</p> */}
@@ -80,10 +85,16 @@ const Home = () => {
       
       </div>
 
-      <div className='bg-gray-900 grow w-full h-40 flex items-center'>
+      <div className='bg-gray-900 grow w-full h-40 flex items-center justify-center'>
         <p className='text-amber-50'>@Team Egghead</p>
       </div>
       </div>
+
+
+
+
+
+
 
       {/* <div className='flex bg-b justify-evenly p-4 ' >
         <div className='m-2'>
