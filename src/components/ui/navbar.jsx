@@ -6,12 +6,17 @@ import gckHackathon from '/src/assets/gckAvatar.jpeg'
 const Navbar = () => {
   return (
     <>
-    <div className='bg-amber-600 flex allign justify-around items-center h-12'>
-        <img src={gckHackathon} alt="img not found" className='h-8 rounded-3xl' />
+    <div className='bg-amber-600 flex justify-between items-center h-12'>
+        {/* <img src={gckHackathon} alt="img not found" className='h-8 rounded-3xl' /> */}
         <h1 > 
-            Title
+            <p>Tumcho Dotor Healthcare App</p>
         </h1>
-        <div>
+
+        <button className='bg-blue-600 p-1.5 rounded-3xl'>
+          Login
+        </button>
+        </div>
+        {/* <div>
         <Link to ="/ui/Login.jsx"  > <p>Login</p> </Link>
         </div>
         <div>
@@ -22,8 +27,7 @@ const Navbar = () => {
         </div>
         <div>
         <Link to ="/help" className='hover:underline' > Help </Link>
-        </div>
-    </div>
+        </div> */}
 
      
     </>
